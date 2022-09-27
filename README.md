@@ -32,8 +32,18 @@ lib/
 # How to use the binaries
 ## Write a simple program
 ```c
-
+// file: test_fluidsynth.c
+#include <fluidsynth.h>
+int main(void)
+{
+    fluid_settings_t* settings = new_fluid_settings();
+    delete_fluid_settings(settings);
+    return 0;
+}
 ```
-## MSYS, MinGW or Clang (x86_64-pc-windows-gnu)
-1. Uncompress the package and copy the folders (bin, include, lib) into your MSYS/MinGW/Clang installation folder (e.g. C:\\msys64\\mingw64)
-2. 
+## MSYS2, MinGW or Clang (x86_64-pc-windows-gnu)
+1. Uncompress the package and copy the folders (bin, include, lib) into your MSYS2/MinGW/Clang installation folder (e.g. C:\\msys64\\mingw64)
+2. Make sure that your `gcc`/`g++` are within the `PATH` environment variable.
+2. Open MSYS2, cmd or PowerShell and use the `cd` command to change the working directory.
+3. Type `gcc test_fluidsynth.c -lfluidsynth` to compile the simple program above.
+4. 
