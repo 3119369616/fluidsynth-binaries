@@ -35,16 +35,26 @@ lib/
 ```c
 // file: test_fluidsynth.c
 #include <fluidsynth.h>
+#include <stdio.h>
 int main(void)
 {
     fluid_settings_t* settings = new_fluid_settings();
+    if(!settings)
+    {
+        puts("ERROR: cannot create a 'settings' instance.");
+        return -1;
+    }
     delete_fluid_settings(settings);
+    puts("Done");
     return 0;
 }
 ```
-## MSYS2, MinGW or Clang (x86_64-pc-windows-gnu)
-1. Uncompress the package and copy the folders (bin, include, lib) into your MSYS2/MinGW/Clang installation folder (e.g. C:\\msys64\\mingw64)
-2. Make sure that your `gcc`/`g++` are within the `PATH` environment variable.
+## Compile it in MSYS2, MinGW or Clang (x86_64-pc-windows-gnu)
+1. Uncompress the package and copy the folders (**bin, include, lib**) into your MSYS2/MinGW/Clang installation folder (e.g. C:\\msys64\\mingw64)
+2. Make sure that your `gcc` and `g++` is in the PATH environment variable.
 2. Open MSYS2, cmd or PowerShell and use the `cd` command to change the working directory.
 3. Type `gcc test_fluidsynth.c -lfluidsynth` to compile the simple program above.
-4. 
+4. If there are NO compilation errors, run the simple program `a.exe` and you'll see the output:
+     ```
+     Done.
+     ```
