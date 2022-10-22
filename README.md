@@ -61,3 +61,5 @@ int main(void)
      ```
 ## Compile it with Visual C++
 This part is still in busy experiments. We will improve the tutorial for it in the future.
+### Compiling in the command prompt of Visual Studio
+**Note**: You must use `x64 Native Tools Command Prompt for VS 20XX`. DO NOT USE `Developer Command Prompt for VS 20XX`!
