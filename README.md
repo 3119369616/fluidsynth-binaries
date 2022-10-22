@@ -63,3 +63,4 @@ int main(void)
 This part is still in busy experiments. We will improve the tutorial for it in the future.
 ### Compiling in the command prompt of Visual Studio
 **Note**: You must use `x64 Native Tools Command Prompt for VS 20XX`. DO NOT USE `Developer Command Prompt for VS 20XX`!
+1. Input `cl test_fluidsynth.c /GR /EHsc /MD /O2 /Ob2 /DNDEBUG /link:C` 
