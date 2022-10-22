@@ -59,5 +59,5 @@ int main(void)
      ```
      A simple test of FluidSynth is OK.
      ```
-## Compile it in Visual C++ with/without Visual Studio
+## Compile it with Visual C++
 This part is still in busy experiments. We will improve the tutorial for it in the future.
