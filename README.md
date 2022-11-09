@@ -9,16 +9,16 @@ Although the binaries are built by Clang on native Windows, they can also used b
 # Package structure
 The binaries are 7-Zipped. Here is their folder structure:
 ```
-bin/
+bin/                       == A folder including DLLs and EXEs. ==
     libfluidsynth-3.dll    == The FluidSynth shared library ==
     fluidsynth.exe         == The FluidSynth program ==
-include/                   == FluidSynth's C/C++ include files. Just #include <fluidsynth.h>. ==
-        fluidsynth.h
-        fluidsynth/
-                   audio.h
+include/                      == FluidSynth's C/C++ header files. Just #include <fluidsynth.h>. ==
+        fluidsynth.h          == The header file you have to include.
+        fluidsynth/           == Other header files... == 
+                   audio.h    
                    event.h
                    ...
-lib/
+lib/                                                  == Libraries for linker ++
     libfluidsynth.dll.a                               == The import library corresponding to "libfluidsynth-3.dll" ==
     cmake/fluidsynth/                                 == CMake configuration files that you can use in your project with CMake. 
                                                          (There isn't a "cmake" folder in FluidSynth 2.2.x) ==
